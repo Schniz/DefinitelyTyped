@@ -1,6 +1,7 @@
 // Type definitions for fast-stats 0.0.2
 // Project: https://github.com/bluesmoon/node-faststats
 // Definitions by: Rogier Schouten <https://github.com/rogierschouten>
+//                 Gal Schlezinger <https://github.com/Schniz>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 
@@ -182,4 +183,19 @@ export declare class Stats {
      * In some cases, IQR filtering may not filter out anything. This can happen if the acceptable range is wider than the bounds of your dataset.
      */
     iqr(): Stats;
+
+    /**
+     * The internal data
+     */
+    data: ReadonlyArray<number>;
+
+    /**
+     * The minimum number
+     */
+    min: number;
+
+    /**
+     * The maximum number
+     */
+    max: number;
 }
